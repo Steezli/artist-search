@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import ArtistList from './containers/ArtistList';
 
-export default function App() {
-  return <h1>Hello World</h1>;
+export default class App extends PureComponent {
+  render() {
+    return (
+      <>
+        <h1>Hello World</h1>
+        <ArtistList />
+      </>
+    );
+  }
 }
-  
