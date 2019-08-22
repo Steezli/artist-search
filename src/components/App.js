@@ -1,13 +1,16 @@
-import React, { PureComponent } from 'react';
-import ArtistList from './containers/ArtistList';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route 
+} from 'react-router-dom';
+import SearchArtists from './containers/SearchArtists';
 
-export default class App extends PureComponent {
-  render() {
-    return (
-      <>
-        <h1>Hello World</h1>
-        <ArtistList />
-      </>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Route path="/" component={SearchArtists} />
+    </Router>
+  );
 }
+
+export default App;
