@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Artist({ artist }) {
   return (
-    <section>
+    <Link to={`/artist/${artist.id}`}>
       <p>{artist.name}</p>
-    </section>
+    </Link>
   );
 }
 
