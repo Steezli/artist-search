@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Artist from './Artist';
 
 export default function Artists({ artists }) {
-  const artistList = artists.map((artist, i) => (
-    <li key={i}>
+  const artistList = artists.map((artist) => (
+    <li key={artist.id}>
       <Artist artist={artist} />
     </li>
   ));
