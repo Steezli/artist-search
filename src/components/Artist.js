@@ -5,7 +5,6 @@ export default function Artist({ artist }) {
   return (
     <section>
       <p>{artist.name}</p>
-      <p>{artist.id}</p>
     </section>
   );
 }
@@ -13,6 +12,6 @@ export default function Artist({ artist }) {
 Artist.propTypes = {
   artist: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string
   })
 };
