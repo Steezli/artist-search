@@ -1,14 +1,19 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route 
+  Route,
+  Switch
 } from 'react-router-dom';
 import SearchArtists from './containers/SearchArtists';
+import DisplayReleases from './containers/DisplayReleases';
 
 function App() {
   return (
     <Router>
-      <Route path="/" component={SearchArtists} />
+      <Switch>
+        <Route path="/artist/:id" component={DisplayReleases} />
+        <Route path="/" component={SearchArtists} />
+      </Switch>
     </Router>
   );
 }

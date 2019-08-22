@@ -12,7 +12,7 @@ export default function Release({ release }) {
 Release.propTypes = {
   release: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string
   })
 };
 
