@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Release({ release }) {
   return (
     <>
-      <p></p>
+      <p>{release.title}</p>
     </>
   );
 }
