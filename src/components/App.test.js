@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from '../components/App';
 
 describe('App component', () => {
   it('renders App', () => {
@@ -8,4 +8,3 @@ describe('App component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-  
