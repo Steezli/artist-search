@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import Artists from '../artists/Artists';
 import { getArtists } from '../../services/MusicApi';
 import Input from '../Input';
-// import Pagination from '../Pagination';
 
 
 export default class ArtistList extends PureComponent {
