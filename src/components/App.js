@@ -7,14 +7,16 @@ import {
 import SearchArtists from './containers/SearchArtists';
 import DisplayReleases from './containers/DisplayReleases';
 import DisplaySongs from './containers/DisplaySongs';
+import Lyrics from './Lyrics';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/release/:id" component={DisplaySongs} />
-        <Route path="/artist/:id" component={DisplayReleases} />
-        <Route path="/" component={SearchArtists} />
+        <Route exact path="/" component={SearchArtists} />
+        <Route path="/lyrics/:artist/:title" component={Lyrics} />
+        <Route path="/release/:artist/:release/:id" component={DisplaySongs} />
+        <Route path="/artist/:artist/:id" component={DisplayReleases} />
       </Switch>
     </Router>
   );

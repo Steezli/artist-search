@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export default function Release({ release }) {
+export default function Release({ release, artist }) {
   return (
-    <Link to={`/release/${release.id}`}>
+    <Link to={`/release/${artist}/${release.title}/${release.id}`}>
       <p>{release.title}</p>
     </Link>
   );
@@ -13,7 +13,8 @@ export default function Release({ release }) {
 Release.propTypes = {
   release: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    id: PropTypes.string
-  })
+    id: PropTypes.string.isRequired
+  }),
+  artist: PropTypes.string
 };
 

@@ -17,7 +17,7 @@ export default class DisplaySongs extends PureComponent {
   render() {
     return (
       <>
-        <Songs songs={this.state.songs} />
+        <Songs songs={this.state.songs} artist={this.props.match.params.artist} />
       </>
     );
   }
